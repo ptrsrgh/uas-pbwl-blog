@@ -19,7 +19,7 @@ class CreatePhotosTable extends Migration
             $table->foreign('photos_post_id')->references('post_id')->on('posts')->onDelete('cascade')->onUpdate('cascade');
             $table->date('photos_date');
             $table->string('photos_title');
-            $table->text('post_text');
+            $table->text('photos_text');
         });
     }
 

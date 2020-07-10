@@ -1,28 +1,6 @@
 @extends('main')
-
-@section('title', 'Sigadget')
+@section('title', 'Tambah Post')
 @section('breadcrumbs')
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>post</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li><a href="#">Post</a></li>
-                            <li class="active">Add</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-@endsection
-
 @section('content') 
         <div class="content mt-3">
             <div class="animated fadeIn">
@@ -31,11 +9,6 @@
                         <div class="pull-left">
                             <strong>Tambah Post</strong>
                         </div>
-                        <div class="pull-right">
-                        <a href="{{ url('post') }}" class="btn btn-secondary btn-sm">
-                                <i class="fa fa-undo"></i> Back
-                            </a>
-                        </div>
                     </div>
             <div class="card-body">
                 <div class="row">
@@ -43,11 +16,10 @@
                         <form action="{{ url("/post") }}" method="POST">
                             @csrf
                             <div class="form-group">
-                                
                                 <label>Nama Kategori</label>
                                 <select name="post_cat_id" class="form-control @error('post_cat_id')
                                 is-invalid @enderror" value="{{ old('post_cat_id') }}" autofocus">
-                                    <option value=""></option>
+                                    <option value="">Pilih kategori</option>
                                     @foreach($category as $item)
                                     <option value="{{ $item->cat_id }}">{{ $item->cat_name }}</option>
                                     @endforeach

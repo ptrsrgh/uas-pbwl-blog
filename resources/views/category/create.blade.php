@@ -1,40 +1,12 @@
 @extends('main')
-
-@section('title', 'Sigadget')
-@section('breadcrumbs')
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>kategori</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li><a href="#">Kategori</a></li>
-                            <li class="active">Add</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-@endsection
-
+@section('title', 'Tambah Kategori')
 @section('content') 
         <div class="content mt-3">
             <div class="animated fadeIn">
                 <div class="card">
                     <div class="card-header">
                         <div class="pull-left">
-                            <strong>Tambah Kategori</strong>
-                        </div>
-                        <div class="pull-right">
-                        <a href="{{ url('category') }}" class="btn btn-secondary btn-sm">
-                                <i class="fa fa-undo"></i> Back
-                            </a>
+                            <strong>Tambah Data Kategori</strong>
                         </div>
                     </div>
             <div class="card-body">
